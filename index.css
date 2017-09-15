@@ -21,11 +21,15 @@ a.links {
 }
 
 a.links:visited {
-	color: #bdb1b1;
+	color: #999595;
 }
 
 a.links:hover {
 	color: #dad4d4;
+}
+
+a.links:active {
+	text-decoration: underline;
 }
 
 h1 {
