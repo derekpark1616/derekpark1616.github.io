@@ -20,11 +20,11 @@ a.links {
 	color: #706d6d;
 }
 
-a.visited {
+a.links.visited {
 	color: #bdb1b1;
 }
 
-a.hover {
+a.links.hover {
 	color: #dad4d4;
 }
 
