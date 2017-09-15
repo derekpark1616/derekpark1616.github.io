@@ -13,16 +13,29 @@ div.container {
 }
 
 a.links {
-	margin: 5px 20px;
+	margin: 5px 20px 15px 20px;
+	font-variant: small-caps;
+	font-size: 20px;
+	text-decoration: none;
 }
 
-#intro {
-	margin-top: 156px;
+a.visited {
+	
+}
+
+a.hover {
+	
 }
 
 h1 {
-	margin-left: auto;
-	margin-right: auto;
-	width: 10em;
+	text-align:center;
+	margin: auto;
+	max-width: 500px;
 }
+
+#intro {
+	margin-top: 100px;
+}
+
+
 
