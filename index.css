@@ -17,14 +17,15 @@ a.links {
 	font-variant: small-caps;
 	font-size: 20px;
 	text-decoration: none;
+	color: #706d6d;
 }
 
 a.visited {
-	
+	color: #bdb1b1;
 }
 
 a.hover {
-	
+	color: #dad4d4;
 }
 
 h1 {
