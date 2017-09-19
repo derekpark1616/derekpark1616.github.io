@@ -17,7 +17,7 @@ a.links {
 	font-variant: small-caps;
 	font-size: 20px;
 	text-decoration: none;
-	color: #706d6d;
+	color: #424242;
 }
 
 a.links:visited {
@@ -32,15 +32,6 @@ a.links:active {
 	text-decoration: underline;
 }
 
-h1 {
-	text-align:center;
-	margin: auto;
-	max-width: 500px;
-}
-
-#intro {
-	margin-top: 100px;
-}
 
 
 
