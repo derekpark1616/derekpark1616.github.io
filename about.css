@@ -1,9 +1,16 @@
-h1 {
-	text-align:center;
+#intro {
+	text-align: center;
+	font-family: Arial;
 	margin: auto;
-	max-width: 500px;
+	max-width: 550px;
+	margin-top: 65px;
 }
 
-#intro {
-	margin-top: 90px;
+#aboutMe {
+	font-family: cursive;
+	padding: 0px 20px;
+}
+
+#email {
+	text-decoration: none;
 }

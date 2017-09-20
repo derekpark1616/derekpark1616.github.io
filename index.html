@@ -4,7 +4,38 @@
 		<meta charset="UTF-8">
 		<link rel="stylesheet" href="index.css">
 		<title>Derek Park</title>
-		<script type="application/javascript">
+	</head>
+
+	<body>
+	
+		<div class="slideshow-container">
+			<div class="mySlides fade">
+				<img src="bungalowpic.jpg" style="width:350px;height:400px;">
+			</div>
+
+			<div class="mySlides fade">
+				<img src="actionShot.jpg" style="width:350px;height:400px;">
+			</div>
+
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+		</div>
+		<br>
+		<div style="text-align:center">
+			<span class="dot" onclick="currentSlide(1)"></span> 
+			<span class="dot" onclick="currentSlide(2)"></span> 
+		</div>
+		
+		<div class="links-container">
+			<a class="links" href="about.html" target="pageFrame">About</a>
+			<a class="links" href="https://github.com/derekpark1616" target="_blank">My Github</a>
+			<a class="links" href="https://derekpark1616.github.io/derekpark1616.github.io/DerekResume.pdf" target="_blank">Resume</a>
+			<a class="links" href="https://docs.google.com/forms/d/e/1FAIpQLSd0LIcObPgyf63r4lg0bjyF65WhoMILd6GgJH9ngN4xWHviag/viewform?usp=form_confirm" target="pageFrame">Contact</a>
+		</div>
+		<iframe height="500px" width="100%" src="about.html" name="pageFrame" style="border:none;"></iframe>
+	</body>
+	
+	<script type="application/javascript">
 			function resizeIFrame(iFrame) {
 				iFrame.width = iFrame.contentWindow.document.body.scrollWidth;
 				iFrame.height = iFrame.contentWindow.document.body.scrollHeight;
@@ -14,17 +45,33 @@
 				var iFrame = document.getElementById('pageFrame');
 				resizeIFrame(iFrame);
 			});
-		</script>
-	</head>
+			
+			var slideIndex = 1;
+			showSlides(slideIndex);
 
-	<body>
-		<img id="selfie" src="stick.png" alt="Derek" style="width:256px;height:256px;">
-		<div class="container">
-			<a class="links" href="about.html" target="pageFrame">About</a>
-			<a class="links" href="https://github.com/derekpark1616" target="_blank">My Github</a>
-			<a class="links" href="https://derekpark1616.github.io/derekpark1616.github.io/DerekResume.pdf" target="_blank">Resume</a>
-			<a class="links" href="https://docs.google.com/forms/d/e/1FAIpQLSd0LIcObPgyf63r4lg0bjyF65WhoMILd6GgJH9ngN4xWHviag/viewform?usp=form_confirm" target="pageFrame">Contact</a>
-		</div>
-		<iframe height="500px" width="100%" src="about.html" name="pageFrame"></iframe>
-	</body>
+			function plusSlides(n) {
+				showSlides(slideIndex += n);
+			}
+
+			function currentSlide(n) {
+				showSlides(slideIndex = n);
+			}
+
+			function showSlides(n) {
+				var i;
+				var slides = document.getElementsByClassName("mySlides");
+				var dots = document.getElementsByClassName("dot");
+				if (n > slides.length) {slideIndex = 1} 
+				if (n < 1) {slideIndex = slides.length}
+				for (i = 0; i < slides.length; i++) {
+					slides[i].style.display = "none"; 
+				}
+				for (i = 0; i < dots.length; i++) {
+					dots[i].className = dots[i].className.replace(" active", "");
+				}
+				slides[slideIndex-1].style.display = "block"; 
+				dots[slideIndex-1].className += " active";
+			}
+			
+	</script>
 </html>
